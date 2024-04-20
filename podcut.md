@@ -1,10 +1,11 @@
 # Project “Podcut”
 
-### _“Many hear, but you listen”_
+### _“Many hear, but you listen”_ <- Double check the semantics
 
 ## Idea:
 
 App provides the following possibilities:
+
 - User selects favorite topic of podcasts they interested about (e.g. movie, evolutionary psychology, history) AND/OR interesting people (e.g. Huberman)
 - App scans (with AI) the topics considering the user preferences
 - App suggests the time frames (cuts) to listen to, with reference to the whole episode (e.g. Huberman - Mental Health [HardWork]: 02.21 - 05.10)
@@ -67,8 +68,6 @@ For whom:
 
 ## Possible bottlenecks:
 
-- Transcription time and cost. "Descript" allows only 30h for PRO version per month which is not nearly enough.
-
 - Bard and ChatGPT cannot provide the timeframes on abstract topics that precisely
   - It can barely divide the text but also a lot of context and background is lost
 
@@ -111,9 +110,8 @@ const request = `
 
 ### Transcription
 
-#### Pricing for 30 hours of usage:
+[Whisper](https://github.com/openai/whisper) is a way to go! There's also a good option with [whisper-node](https://github.com/ariym/whisper-node?tab=readme-ov-file#whisper-node).
 
-- [Descript](https://www.descript.com/pricing) - 30h MAX, Pro - 288$/year - maybe negotiable (Enterprise - 45h)
-- [Rev](https://www.rev.com/pricing) - no limit, 5400$/year (0.25$/minute)
-- [Otter](https://otter.ai/pricing) - invalid option (meetings/calls focused)
-- [Sonix](https://sonix.ai/pricing) - no limit, 2000$/year (5$/hour + 16.50$/month)
+It seems it's better to use the original project due to immaturity of `whisper-node` bindings.
+
+It's on very early stage and it will take time to support all of the original features and configurations (e.g. support of `.mp3` files, transcription formatting)
