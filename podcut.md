@@ -54,21 +54,23 @@ For whom:
 - POC/Prototype
 - First customer (exclusively Chris Williamson?)
 
-### POC/Prototype:
+### MVP:
 
 - AI Integration
   - Provide audio file to generate timeframes (start and end of topic/label) <- THE MOST IMPORTANT - BASE
-    - Do we a need podcast transcript for that? <- SEEMS SO
   - Generate labels and categories for uploaded podcasts
   - Connect labels with found timeframes
   - Connect user categories (preferences) with labels to provide suggestions
     Category (psychology) => Labels (Mental Toughness, Openness) => Suggested Cuts (Timestamps start-end)
 - Audio files integration (storing/processing clips and audio files)
+
+### Extras:
+
 - Engine to provide the suggestions
 
 ## Possible bottlenecks:
 
-- Bard and ChatGPT cannot provide the timeframes on abstract topics that precisely
+- Gemini and ChatGPT cannot provide the timeframes on abstract topics that precisely
   - It can barely divide the text but also a lot of context and background is lost
 
 ## Design:
