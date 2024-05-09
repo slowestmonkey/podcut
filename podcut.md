@@ -117,3 +117,7 @@ const request = `
 It seems it's better to use the original project due to immaturity of `whisper-node` bindings.
 
 It's on very early stage and it will take time to support all of the original features and configurations (e.g. support of `.mp3` files, transcription formatting)
+
+### AI text generation
+
+Chat GPT 4 ([pricing](https://help.openai.com/en/articles/7127956-how-much-does-gpt-4-cost)). Also using the plan for 128k tokens should be more than enough to handle even long podcasts (~96k words while ~6min of tested podcast is ~1200 words while ~6min of tested podcast is ~1200 words)
