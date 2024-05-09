@@ -6,9 +6,11 @@ dirname = os.path.dirname(__file__)
 filename = 'naval-ep31.mp3'
 filepath = os.path.join(dirname, '../podcasts/' + filename)
 
-result = model.transcribe(filepath)
-resultFilepath = os.path.join(dirname, '../transcripts/whisper/' + filename + '.txt')
+result = model.transcribe(
+  audio=filepath,
+  word_timestamps=True
+)
+resultFilepath = os.path.join(dirname, '../transcripts/whisper/' + filename + '.json')
 
 with open(resultFilepath, 'w') as file:
-    # result object contains timestamps
-    print(result["text"], file=file) 
+    print(result, file=file) 
