@@ -1,15 +1,15 @@
-import path from "node:path";
-import whisper from "whisper-node";
+import OpenAI from "openai";
+
+const openai = new OpenAI({
+  apiKey: process.env["OPENAI_API_KEY"],
+});
 
 async function main() {
-  await whisper(path.resolve(__dirname, "../podcasts/naval-ep31.wav"), {
-    modelName: "medium.en",
-    whisperOptions: {
-      gen_file_txt: true, // outputs .txt file
-      word_timestamps: false, // timestamp for every word
-      // timestamp_size: 0      // cannot use along with word_timestamps:true
-    },
-  });
-}
+  const params: OpenAI.Chat.ChatCompletionCreateParams = {
+    messages: [{ role: "user", content: "Say this is a test" }],
+    model: "gpt-3.5-turbo",
+  };
 
-main();
+  const chatCompletion: OpenAI.Chat.ChatCompletion =
+    await openai.chat.completions.create(params);
+}
