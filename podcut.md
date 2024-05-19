@@ -95,9 +95,8 @@ const timeFrame = 5
 const topics = ["Exercising", "Nutrition", "Mental Health", "Psychology", "Relationships", "Self Improvement"]
 
 const requestPrefix = `split following podcast by:
-  - following topics if exist: ${topics}
-  - ~${timeFrame}min time frame
-  - allowing speakers to finish`
+  - divide by the following topics if exist: ${topics}
+  - approximately ${timeFrame}min time frames finishing the topic`
 
 const transcript = `text`
 const request = `
@@ -107,6 +106,12 @@ const request = `
   END
 `
 ```
+
+Expected result:
+
+"Name of podcaster" - "Name of podcast" / "Category" - "Label" : 02.21 - 05.10
+
+E.g. Huberman - How to become resilient / Neuroscience - Mental toughness: 02.21 - 05.10
 
 ## Providers
 
