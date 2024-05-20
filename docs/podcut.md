@@ -29,7 +29,7 @@ For whom:
 ## Questions:
 
 - Does it already exist?
-  - Didn’t find any competitors
+  - [Snipd](https://www.snipd.com/)
 - What are the advantages over other platforms (e.g. tik-tok)?
   - Podcast heavy
   - Education purpose (focus on learning rather than entertaining)
