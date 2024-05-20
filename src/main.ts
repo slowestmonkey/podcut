@@ -53,7 +53,9 @@ async function main() {
     await openai.chat.completions.create(params);
 
   console.log(JSON.stringify(chatCompletion.choices[0].message));
-  // result:
+  // expected result e.g.:
+  // "Name of podcaster" - "Name of podcast" / "Category" - "Label" : 02.21 - 05.10
+  // actual result:
   // { role: "assistant", content: { psychology: "0 - 151", selfImprovement: "152 - 367"} }
 }
 
