@@ -92,11 +92,12 @@ AI Request (Chat GPT):
 
 ```TS
 const timeFrame = 5
-const topics = ["Exercising", "Nutrition", "Mental Health", "Psychology", "Relationships", "Self Improvement"]
+const categories = ["Exercising", "Nutrition", "Mental Health", "Psychology", "Relationships", "Self Improvement"]
 
-const requestPrefix = `split following podcast by:
-  - divide by the following topics if exist: ${topics}
-  - approximately ${timeFrame}min time frames finishing the topic`
+const requestPrefix = `split the podcast using the following criteria:
+  - divide by the following categories if exist: ${categories}
+  - approximately ${timeFrame}min time frames finishing the topic
+  - result pattern: "Category" : "startInSeconds" - "endInSeconds"`
 
 const transcript = `text`
 const request = `
