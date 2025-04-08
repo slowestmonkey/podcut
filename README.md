@@ -1,64 +1,67 @@
 # Project “Podcut”
-## Status: the research is outdated, the idea might be relevant though...
+
+## Status
+
+The research is outdated, but the idea might still be relevant.
 
 ### _“Many hear, but you listen”_
 
-## Idea:
+## Idea
 
-App provides the following possibilities:
+The app provides the following features:
 
-- User selects favorite topic of podcasts they interested about (e.g. movie, evolutionary psychology, history) AND/OR interesting people (e.g. Huberman)
-- App scans (with AI) the topics considering the user preferences
-- App suggests the time frames (cuts around 5min) to listen to, with reference to the whole episode (e.g. Huberman - Mental Health [HardWork]: 02.21 - 05.10). The idea of TikTok might be a reference...
+- Users can select their favorite podcast topics (e.g., movies, evolutionary psychology, history) and/or interesting people (e.g., Huberman).
+- The app uses AI to scan podcast topics based on user preferences.
+- It suggests time frames (approximately 5 minutes) to listen to, with references to the full episode (e.g., Huberman - Mental Health [HardWork]: 02:21 - 05:10). The concept is inspired by TikTok's short-form content.
 
-## Business:
+## Business
 
-Why:
+### Why
 
-- Should provide boost of plays for podcaster due to easier consumption of content (also not skipping or abandoning whole episodes)
-- Should also keep old podcast more relevant since cuts will be grouped by topic (not by date) considering the user preference
+- Increases podcast plays by making content easier to consume (reduces skipping or abandoning full episodes).
+- Keeps older podcasts relevant by grouping cuts by topic (rather than by date) based on user preferences.
 
-For whom:
+### Target Audience
 
-- Young people willing to improve themselves with a shorter attention span
-- People who are interested in a specific topics/ideas but not in in a podcaster or guest themselves
+- Young people looking to improve themselves but with shorter attention spans.
+- Individuals interested in specific topics or ideas rather than specific podcasters or guests.
 
-## Competitors:
+## Competitors
 
-- [Snipd](https://www.snipd.com/) - Covers some parts of this idea (not the categorizing functionality, e.g. listening to the "Wealth" category cuts)
+- [Snipd](https://www.snipd.com/) - Covers some aspects of this idea but lacks categorization functionality (e.g., listening to cuts grouped by "Wealth" category).
 
 ## Plan
 
-### MVP:
+### MVP
 
-- AI Integration
-  - Provide audio file to generate timeframes (start and end of topic/label) - DONE
+- **AI Integration**
+  - Generate timeframes (start and end of topics/labels) from audio files - DONE
   - Generate labels and categories for uploaded podcasts - DONE
-  - Connect labels with found timeframes
-  - Connect user categories (preferences) with labels to provide suggestions
-    Category (psychology) => Labels (Mental Toughness, Openness) => Suggested Cuts (Timestamps start-end)
+  - Link labels with identified timeframes.
+  - Match user preferences (categories) with labels to provide suggestions:
+    - Example: Category (Psychology) → Labels (Mental Toughness, Openness) → Suggested Cuts (Timestamps: start-end).
 
 ## Architecture
 
-![alt text](./docs/architecture.png)
+![Architecture Diagram](./docs/architecture.png)
 
 ## Providers
 
 ### Transcription
 
-[whisperx](https://github.com/m-bain/whisperX) is a way to go! It provides:
+[whisperx](https://github.com/m-bain/whisperX) is the recommended tool. It provides:
 
-- transcription
-- speaker detection
+- Transcription
+- Speaker detection
 
-### AI text generation
+### AI Text Generation
 
-Chat GPT 4 ([pricing](https://help.openai.com/en/articles/7127956-how-much-does-gpt-4-cost)). Also using the plan for 128k tokens should be more than enough to handle even long podcasts (~96k words while ~6min of tested podcast is ~1200 words while ~6min of tested podcast is ~1200 words)
+Chat GPT-4 ([pricing](https://help.openai.com/en/articles/7127956-how-much-does-gpt-4-cost)) is suitable. The 128k token plan is sufficient to handle even long podcasts (~96k words). For reference, ~6 minutes of a podcast is ~1200 words.
 
-## Later improvements:
+## Future Improvements
 
-- Podcut suggestions might consider user’s average attention span (might also increase uses’s attention by slowly providing longer cuts)
-- Likes to promote the cut to the top
-- Engine to provide the suggestions
+- Tailor suggestions to the user’s average attention span (gradually increasing cut lengths to improve attention).
+- Allow users to like cuts to promote them to the top.
+- Develop an engine to refine suggestions.
 
-### _For more check the docs folder_
+### _For more details, check the docs folder._
