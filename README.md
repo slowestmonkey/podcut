@@ -1,12 +1,10 @@
 # Project “Podcut”
 
-## Status
-
-The research is outdated, but the idea might still be relevant.
-
-### _“Many hear, but you listen”_
+## _Project status: The research is outdated, but the idea might still be relevant._
 
 ## Idea
+
+### _“Many hear, but you listen”_
 
 The app provides the following features:
 
