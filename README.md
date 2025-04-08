@@ -1,4 +1,5 @@
 # Project “Podcut”
+## Status: the research is outdated, the idea might be relevant though...
 
 ### _“Many hear, but you listen”_
 
@@ -24,7 +25,7 @@ For whom:
 
 ## Competitors:
 
-- [Snipd](https://www.snipd.com/) - Unfortunately covers 90% percent of current idea (except the categorizing functionality, e.g. listening to the "Wealth" category cuts)
+- [Snipd](https://www.snipd.com/) - Covers some parts of this idea (not the categorizing functionality, e.g. listening to the "Wealth" category cuts)
 
 ## Plan
 
